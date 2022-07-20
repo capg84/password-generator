@@ -18,7 +18,8 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
   var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  var specialChars = "";
+  var specialChars = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  chars = chars + specialChars;
   var string_length = 12;
   var randomstring = '';
   for (var i=0; i<string_length; i++) {
