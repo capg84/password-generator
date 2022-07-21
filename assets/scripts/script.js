@@ -17,6 +17,10 @@ function generatePassword() {
 
 // setting the password length with validation
   var string_length = Number(prompt("What would be your password length? The length must be between 8 and 128 characters."));
+    if(!/^[0-9]+$/.test(string_length)){
+      return "Please enter a number between 8 and 128.";
+    }
+    
     if (string_length < 8) {
       return "Password lengh must be between 8 and 128 characters.";
     } else if (string_length > 128) {
