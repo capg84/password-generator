@@ -10,14 +10,23 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// generating the password using the conditions
 function generatePassword() {
+
+// setting the password length with validation
   var string_length = Number(prompt("What would be your password length? The length must be between 8 and 128 characters."));
+    if (string_length < 8) {
+      return "Password lengh must be between 8 and 128 characters.";
+    } else if (string_length > 128) {
+      return "Password lengh must be between 8 and 128 characters.";
+    }
+
+// defining the character sets
   var chars = ''; //= "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   var specialChars = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -25,6 +34,7 @@ function generatePassword() {
   var numeric = "0123456789";
   
   //lowercase check
+  
   if (1 == 1) {
     chars = chars + lowerCase;
   }
@@ -40,8 +50,11 @@ function generatePassword() {
   }
 
   //Sepcial character check
-  if (1 == 0) {
+  var specialCharsIn = confirm("Do you want to include speical characters?");
+  if (confirm = 1) {
     chars = chars + specialChars;
+  } else {
+    chars = chars;
   }
   
   var randomstring = '';
