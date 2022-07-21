@@ -26,32 +26,35 @@ function generatePassword() {
       return "Password lengh must be between 8 and 128 characters.";
     }
 
-// defining the character sets
+// defining the variables for the character sets
   var chars = ''; //= "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  var specialChars = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numeric = "0123456789";
+  var specialChars = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  
   
   //lowercase check
-  
-  if (1 == 1) {
+  var lowerCaseIn = confirm("Do you want to include lowercase characters?");
+  if (lowerCaseIn == 1) {
     chars = chars + lowerCase;
   }
 
   //Uppercase check
-  if (2 == 3) {
+  var upperCaseIn = confirm("Do you want to include UPPERCASE characters?")
+  if (upperCaseIn == 1) {
     chars = chars + upperCase;
   }
 
   //numeric check
-  if (2 == 2) {
+  var numericIn = confirm("Do you want to include numbers?")
+  if (numericIn == 1) {
     chars = chars + numeric;
   }
 
   //Sepcial character check
   var specialCharsIn = confirm("Do you want to include speical characters?");
-  if (confirm = 1) {
+  if (specialCharsIn == 1) {
     chars = chars + specialChars;
   } else {
     chars = chars;
